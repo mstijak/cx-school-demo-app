@@ -4,6 +4,7 @@ import About from './about';
 import Widgets from './widgets';
 import Pages from './pages';
 import Dashboard from './dashboard';
+import EasyWire from './easywire';
 import TODO from './todo';
 import { CheckerLayout } from '../layout/CheckerLayout';
 import SignIn from './pages/sign-in';
@@ -28,6 +29,9 @@ export default () => (
             </SandboxedRoute>
             <SandboxedRoute route="~/todo">
                <TODO />
+            </SandboxedRoute>
+            <SandboxedRoute route="~/easywire">
+               <EasyWire />
             </SandboxedRoute>
             <Route route="~/customers" url-bind="url" prefix>
                <PageNotImplemented />

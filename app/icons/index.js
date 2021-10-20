@@ -23,6 +23,7 @@ import {
    PrinterIcon,
    PuzzleIcon,
    RefreshIcon,
+   ScaleIcon,
    SearchIcon,
    TemplateIcon,
    UserGroupIcon,
@@ -30,9 +31,19 @@ import {
    UsersIcon,
    ViewListIcon,
    XIcon,
+   CheckCircleIcon,
 } from '@heroicons/react/outline';
 
+import { OfficeBuildingIcon, CheckCircleIcon as CheckCircleIconSolid } from '@heroicons/react/solid';
+
 //register all icons that are used within the application
+
+Icon.register('office-building', (props) => <OfficeBuildingIcon {...props} />);
+
+Icon.register('scale', (props) => <ScaleIcon {...props} />);
+
+Icon.register('check-circle-solid', (props) => <CheckCircleIconSolid {...props} />);
+Icon.register('check-circle', (props) => <CheckCircleIcon {...props} />);
 
 Icon.register('chart-bar', (props) => <ChartBarIcon {...props} />);
 
