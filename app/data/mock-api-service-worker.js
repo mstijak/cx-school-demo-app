@@ -1,5 +1,6 @@
 import { setupWorker } from 'msw';
 import { customerEndpoints } from './customers';
+import { easywireEndpoints } from './easywire';
 import { invoiceEndpoints } from './invoices';
 import { productEndpoints } from './products';
 
@@ -9,7 +10,7 @@ navigator.serviceWorker.getRegistrations().then(function (registrations) {
    }
 });
 
-const worker = setupWorker(...customerEndpoints, ...productEndpoints, ...invoiceEndpoints);
+const worker = setupWorker(...customerEndpoints, ...productEndpoints, ...invoiceEndpoints, ...easywireEndpoints);
 worker
    .start({
       onUnhandledRequest: 'warn',
