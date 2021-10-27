@@ -10,6 +10,7 @@ import { CheckerLayout } from '../layout/CheckerLayout';
 import SignIn from './pages/sign-in';
 import { SandboxedRoute } from '../components/SandboxedRoute';
 import InvoiceRoutes from './invoices';
+import Forms from './forms';
 import { PageNotImplemented } from '../components/PageNotImplemented';
 
 export default () => (
@@ -32,6 +33,9 @@ export default () => (
             </SandboxedRoute>
             <SandboxedRoute route="~/easywire">
                <EasyWire />
+            </SandboxedRoute>
+            <SandboxedRoute route="~/forms">
+               <Forms />
             </SandboxedRoute>
             <Route route="~/customers" url-bind="url" prefix>
                <PageNotImplemented />
